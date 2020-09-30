@@ -20,6 +20,12 @@ import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
 
+import axios from 'axios'
+
+/**
+ * default URL for axios HTTP request
+ */
+axios.defaults.baseURL = 'http://web_app:changeit@192.168.1.100:9999/services/trafficiuaa/'
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

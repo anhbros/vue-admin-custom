@@ -1,4 +1,21 @@
+// import { param } from '@/utils'
 import request from '@/utils/request'
+import axios from 'axios'
+
+export function postLogin(data) {
+  const { password, username } = data
+  return axios.post('/oauth/token', {
+    params: {
+      password,
+      username,
+      grant_type: 'password'
+    },
+    headers: {
+      'accept': '*/*',
+      'X-XSRF-TOKEN': ''
+    }
+  })
+}
 
 export function login(data) {
   return request({

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Vue Element Admin',
+  title: 'TrafficID ver2.0',
 
   /**
    * @type {boolean} true | false

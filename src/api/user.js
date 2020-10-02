@@ -4,15 +4,20 @@ import axios from 'axios'
 
 export function postLogin(data) {
   const { password, username } = data
-  return axios.post('/oauth/token', {
-    params: {
-      password,
-      username,
-      grant_type: 'password'
-    },
+  return axios({
+    url: 'auth/login',
+    method: 'POST',
+    data: {
+      username, password
+    }
+  })
+}
+
+export function getInfoByToken(token) {
+  return axios({
+    url: 'services/trafficiuaa/api/user',
     headers: {
-      'accept': '*/*',
-      'X-XSRF-TOKEN': ''
+      'Authorization': token
     }
   })
 }

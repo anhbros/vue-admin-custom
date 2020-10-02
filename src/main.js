@@ -25,7 +25,7 @@ import axios from 'axios'
 /**
  * default URL for axios HTTP request
  */
-axios.defaults.baseURL = 'http://web_app:changeit@192.168.1.100:9999/services/trafficiuaa/'
+axios.defaults.baseURL = 'http://192.168.1.100:8080/'
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

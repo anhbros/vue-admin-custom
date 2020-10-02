@@ -34,7 +34,7 @@ const actions = {
   postLogin({ commit }, userInfo) {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
-      postLogin({ username: username.trim(), password, grant_type: 'password' }).then(res => {
+      postLogin({ username: username.trim(), password }).then(res => {
         const { data } = res
         commit('SET_TOKEN', data.access_token)
         setToken(data.access_token)

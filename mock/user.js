@@ -29,11 +29,11 @@ module.exports = [
     url: '/vue-element-admin/user/login',
     type: 'post',
     response: config => {
-      const { username } = config.body
+      const { username , password } = config.body
       const token = tokens[username]
 
       // mock error
-      if (!token) {
+      if (!token || password !== 'admin') {
         return {
           code: 60204,
           message: 'Account and password are incorrect.'
